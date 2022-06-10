@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="383.0" prefWidth="544.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.LoginUI">
+   <children>
+      <Pane layoutX="-3.0" prefHeight="395.0" prefWidth="551.0">
+         <children>
+            <PasswordField fx:id="Tpassword" layoutX="220.0" layoutY="271.0" />
+            <Button fx:id="Blogin" layoutX="246.0" layoutY="320.0" mnemonicParsing="false" onAction="#click_Login" prefHeight="49.0" prefWidth="107.0" text="Login" />
+            <Label fx:id="Luserid" layoutX="146.0" layoutY="213.0" prefHeight="39.0" prefWidth="74.0" text="User ID" />
+            <Label fx:id="Lpassword" layoutX="146.0" layoutY="266.0" prefHeight="39.0" prefWidth="74.0" text="Password" />
+            <TextField fx:id="Tuserid" layoutX="220.0" layoutY="217.0" />
+            <Label fx:id="Logo" layoutX="207.0" layoutY="68.0" prefHeight="74.0" prefWidth="217.0" text="ComChat" textFill="#682be3">
+               <font>
+                  <Font size="37.0" />
+               </font>
+            </Label>
+            <TextField fx:id="ErrorMsg" editable="false" layoutX="214.0" layoutY="159.0" prefHeight="39.0" prefWidth="201.0" style="-fx-background-color: 0;">
+               <effect>
+                  <ColorAdjust />
+               </effect>
+               <font>
+                  <Font size="17.0" />
+               </font></TextField>
+            <Button fx:id="Bregister" layoutX="381.0" layoutY="345.0" mnemonicParsing="false" onAction="#Register_show" style="-fx-background-color: 0;" text="register" textFill="#b85033">
+               <font>
+                  <Font name="System Italic" size="15.0" />
+               </font>
+            </Button>
+            <Pane fx:id="Registerplane" prefHeight="395.0" prefWidth="610.0" visible="false">
+               <children>
+                  <Button fx:id="BnewUser" layoutX="246.0" layoutY="318.0" mnemonicParsing="false" onAction="#new_user" prefHeight="55.0" prefWidth="107.0" text="Register" />
+                  <Label layoutX="118.0" layoutY="74.0" prefHeight="39.0" prefWidth="91.0" text="user_id" />
+                  <Label layoutX="117.0" layoutY="118.0" prefHeight="39.0" prefWidth="91.0" text="user_name" />
+                  <Label layoutX="117.0" layoutY="164.0" prefHeight="39.0" prefWidth="91.0" text="user_pw" />
+                  <TextField fx:id="Tnewid" layoutX="225.0" layoutY="79.0" promptText="输入8位数字" />
+                  <TextField fx:id="Tnewname" layoutX="225.0" layoutY="122.0" promptText="用户名（不超过15个字）" />
+                  <TextField fx:id="Tnewpw" layoutX="225.0" layoutY="168.0" promptText="密码（不超过10位）" />
+                  <Label layoutX="117.0" layoutY="213.0" prefHeight="30.0" prefWidth="74.0" text="user_sex" />
+                  <Label layoutX="118.0" layoutY="263.0" prefHeight="30.0" prefWidth="82.0" text="user_age" />
+                  <TextField fx:id="Tnewsex" layoutX="225.0" layoutY="213.0" promptText="性别" />
+                  <TextField fx:id="Tnewage" layoutX="225.0" layoutY="263.0" promptText="年龄" />
+                  <Button layoutX="401.0" layoutY="334.0" mnemonicParsing="false" onAction="#register_exit" prefHeight="39.0" prefWidth="138.0" style="-fx-background-color: 0;" text="返回登录界面" textFill="#ff0808" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

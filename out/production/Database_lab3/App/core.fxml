@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="567.0" prefWidth="846.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.CoreUI">
+    <children>
+          <BorderPane fx:id="Mainplane" prefHeight="567.0" prefWidth="846.0">
+              <bottom>
+                  <HBox prefHeight="41.0" prefWidth="603.0" BorderPane.alignment="CENTER">
+                      <children>
+                          <Button fx:id="BFriend" mnemonicParsing="false" onAction="#Friend_show" prefHeight="41.0" prefWidth="221.0" text="Friends">
+                              <font>
+                                  <Font size="18.0" />
+                              </font>
+                  </Button>
+                          <Button fx:id="BRecords" mnemonicParsing="false" onAction="#show_records" prefHeight="41.0" prefWidth="222.0" text="Records">
+                              <font>
+                                  <Font size="18.0" />
+                              </font>
+                  </Button>
+                  <Button fx:id="BHome" mnemonicParsing="false" onAction="#Chatplane" prefHeight="41.0" prefWidth="207.0" text="Home" />
+                          <Button fx:id="BComments" mnemonicParsing="false" onAction="#express_comments" prefHeight="41.0" prefWidth="206.0" text="Comments">
+                              <font>
+                                  <Font size="18.0" />
+                              </font>
+                  </Button>
+                          <Button fx:id="BInformation" mnemonicParsing="false" onAction="#initapp" prefHeight="41.0" prefWidth="209.0" text="me">
+                              <font>
+                                  <Font size="18.0" />
+                              </font>
+                  </Button>
+                      </children>
+                  </HBox>
+              </bottom>
+              <right>
+                  <VBox fx:id="BmeBox" prefHeight="526.0" prefWidth="206.0" BorderPane.alignment="CENTER">
+                      <children>
+                          <ImageView fx:id="Imageself" fitHeight="145.0" fitWidth="207.0" opacity="0.72" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../bg.jpg" />
+                     </image></ImageView>
+                  <HBox prefHeight="43.0" prefWidth="207.0">
+                     <children>
+                        <Label prefHeight="37.0" prefWidth="58.0" text="id" />
+                        <TextField fx:id="UserID" editable="false" prefHeight="37.0" prefWidth="137.0" />
+                     </children>
+                  </HBox>
+                          <HBox prefHeight="38.0" prefWidth="160.0">
+                              <children>
+                                  <Label prefHeight="38.0" prefWidth="57.0" text="name" />
+                                  <TextField fx:id="Tname" editable="false" prefHeight="38.0" prefWidth="137.0" />
+                              </children>
+                          </HBox>
+                          <HBox layoutX="10.0" layoutY="117.0" prefHeight="38.0" prefWidth="160.0">
+                              <children>
+                                  <Label prefHeight="38.0" prefWidth="57.0" text="sex" />
+                                  <TextField fx:id="Tsex" prefHeight="38.0" prefWidth="136.0" />
+                              </children>
+                          </HBox>
+                          <HBox layoutX="10.0" layoutY="193.0" prefHeight="38.0" prefWidth="160.0">
+                              <children>
+                                  <Label prefHeight="38.0" prefWidth="57.0" text="money" />
+                                  <TextField fx:id="Tmoney" editable="false" prefHeight="38.0" prefWidth="136.0" />
+                              </children>
+                          </HBox>
+                          <HBox layoutX="10.0" layoutY="117.0" prefHeight="38.0" prefWidth="160.0">
+                              <children>
+                                  <Label prefHeight="38.0" prefWidth="58.0" text="age" />
+                                  <TextField fx:id="Tage" prefHeight="38.0" prefWidth="134.0" />
+                              </children>
+                          </HBox>
+                  <TextArea fx:id="TIntroduction" prefHeight="134.0" prefWidth="166.0" />
+                  <Button fx:id="changeEdit" mnemonicParsing="false" onAction="#changeEditable" prefHeight="47.0" prefWidth="205.0" text="changeEditable" />
+                  <Button fx:id="Bsetting" mnemonicParsing="false" onAction="#setInformation" prefHeight="41.0" prefWidth="208.0" text="setting" />
+                      </children>
+                  </VBox>
+              </right>
+              <left>
+                  <VBox fx:id="BFriendBox" prefHeight="526.0" prefWidth="179.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ListView fx:id="FriendList" prefHeight="526.0" prefWidth="173.0" />
+               </children></VBox>
+              </left>
+              <center>
+                  <VBox fx:id="CenterBox" prefHeight="526.0" prefWidth="471.0" BorderPane.alignment="CENTER">
+                      <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0" />
+                          <TextArea fx:id="Trecords" editable="false" prefHeight="491.0" prefWidth="498.0" />
+                          <HBox prefHeight="63.0" prefWidth="304.0">
+                              <children>
+                                  <VBox prefHeight="50.0" prefWidth="225.0">
+                                      <children>
+                                          <Label prefHeight="18.0" prefWidth="216.0" text="Friends ID" />
+                                          <TextField fx:id="Tfid" />
+                                      </children>
+                                  </VBox>
+                                  <Button fx:id="Bsend" mnemonicParsing="false" onAction="#sendMessage" prefHeight="50.0" prefWidth="273.0" text="send" />
+                              </children>
+                          </HBox>
+                  <TextArea fx:id="TMessage" prefHeight="200.0" prefWidth="200.0" />
+                      </children>
+                  </VBox>
+              </center>
+         <top>
+            <MenuBar prefHeight="36.0" prefWidth="846.0" BorderPane.alignment="CENTER">
+              <menus>
+                <Menu fx:id="MFriend" mnemonicParsing="false" text="+">
+                  <items>
+                    <MenuItem fx:id="Manuadd" mnemonicParsing="false" onAction="#show_addplane" text="add" />
+                  </items>
+                </Menu>
+                <Menu fx:id="MLogout" mnemonicParsing="false" text="Logout">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#Logout" text="logout" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+          </BorderPane>
+      <SplitPane fx:id="Commentplane" centerShape="false" dividerPositions="0.7306843267108167" layoutX="176.0" layoutY="37.0" onDragDetected="#express_comments" orientation="VERTICAL" prefHeight="489.0" prefWidth="462.0" visible="false">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="332.0" prefWidth="460.0">
+               <children>
+                  <ListView fx:id="ListComments" layoutX="-1.0" layoutY="3.0" prefHeight="345.0" prefWidth="460.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" onDragDetected="#express_comments" prefHeight="147.0" prefWidth="460.0">
+               <children>
+                  <HBox layoutY="-5.0" prefHeight="137.0" prefWidth="462.0">
+                     <children>
+                        <TextArea fx:id="Tincomment" prefHeight="111.0" prefWidth="274.0" promptText="input comments" />
+                        <VBox prefHeight="145.0" prefWidth="189.0">
+                           <children>
+                              <TextField fx:id="Ttopics" prefHeight="82.0" prefWidth="214.0" promptText="Topics" />
+                              <Button fx:id="Brelease" mnemonicParsing="false" onAction="#release_comment" prefHeight="63.0" prefWidth="187.0" text="Release" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <ScrollPane fx:id="Recordsplane" layoutX="177.0" layoutY="37.0" prefHeight="489.0" prefWidth="460.0" visible="false">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="488.0" prefWidth="460.0">
+               <children>
+                  <TableView fx:id="TableRecords" layoutY="-1.0" prefHeight="489.0" prefWidth="460.0">
+                    <columns>
+                      <TableColumn fx:id="user_id_column" prefWidth="112.0" text="user_id" />
+                      <TableColumn fx:id="user_id_f_column" prefWidth="100.0" text="user_id_f" />
+                        <TableColumn fx:id="user_message_column" prefWidth="230.0" text="Message" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <Pane fx:id="AddPlane" layoutX="176.0" layoutY="35.0" prefHeight="216.0" prefWidth="307.0" visible="false">
+         <children>
+            <Label layoutX="26.0" layoutY="51.0" prefHeight="41.0" prefWidth="74.0" text="friend_id" />
+            <TextField fx:id="Taddfid" layoutX="100.0" layoutY="57.0" prefHeight="29.0" prefWidth="187.0" />
+            <Button layoutX="100.0" layoutY="137.0" mnemonicParsing="false" onAction="#addfriend" prefHeight="41.0" prefWidth="122.0" text="Add" />
+            <Button layoutX="278.0" layoutY="-1.0" mnemonicParsing="false" onAction="#register_exit" prefHeight="12.0" prefWidth="4.0" text="X" />
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>
