@@ -21,7 +21,7 @@ public class Main extends Application{
 
     // 数据库的用户名与密码，需要根据自己的设置
     public static final String USER = "root";
-    public static final String PASS = "cgh21#sql";
+    public static final String PASS = "******";  // 数据库登录密码
 
     public static Connection connection;
     public static Statement statement;
@@ -64,7 +64,7 @@ public class Main extends Application{
             try {
                 if (statement != null) statement.close();
             } catch (SQLException ignored) {
-            }// 什么都不做
+            }
             try {
                 if (connection != null) connection.close();
             } catch (SQLException se) {
