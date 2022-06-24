@@ -1,4 +1,4 @@
-# HIT_DataBase_lab3
+# HIT_DataBase_lab3 ---- a simple chat software
 
 ###1 在本地建立数据库comchat 可根据DB_design文件夹来建立 
 
